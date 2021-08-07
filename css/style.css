@@ -6,6 +6,8 @@
   --darkergrey: rgb(175, 176, 179);
 }
 
+/*generals*/
+
 body,
 h1,
 h2,
@@ -15,7 +17,8 @@ h5,
 h6,
 a,
 p,
-span, ul {
+span,
+ul {
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -23,58 +26,96 @@ span, ul {
   list-style-type: none;
   color: var(--black);
 }
-body {
-  background-color: var(--lightgrey);
+.feedmenu a,
+.search button,
+.first li,
+.second li {
+  color: var(--darkergrey);
 }
+button {
+  background-color: var(--lightgrey);
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+  padding: 7px;
+}
+
+header .container,
+.icons ul,
+.description,
+.description .container,
+.description .toptext,
+.description .stats,
+.description .text,
+.highlights ul,
+.posts ul,
+.feedmenu {
+  display: flex;
+}
+header .container,
+.description .toptext,
+.description .stats,
+.posts ul {
+  justify-content: space-between;
+}
+.icons ul,
+.profile,
+.description,
+.feedmenu {
+  justify-content: center;
+}
+header .container,
+.icons ul,
+.profile,
+.description,
+.description .toptext {
+  align-items: center;
+}
+.logo,
+.icons {
+  width: 20%;
+}
+.description .toptext .username h1,
+.description .text {
+  font-weight: 300;
+}
+.bio .name,
+.description .toptext button,
+.highlights ul li h4,
+.feedmenu {
+  font-weight: 500;
+}
+
 .container {
   padding: 0px 185px 0px 185px;
 }
+
+body {
+  background-color: var(--lightgrey);
+}
+
 /*header*/
 header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding-top: 10px;
   padding-bottom: 5px;
   border-bottom: 1px var(--grey) solid;
   background-color: rgb(255, 255, 255);
 }
-.logo {
-  width: 20%;
-}
+
 .logo img {
   width: 150px;
-  height: auto;
-}
-.logo a {
-  background-color: rgb(255, 255, 255);
 }
 .search button {
-  background-color: var(--lightgrey);
-  padding: 7px 80px;
-  border: 1px solid var(--grey);
-  color: var(--darkergrey);
-  border-radius: 3px;
-  font-weight: normal;
+  padding-right: 73px;
+  padding-left: 73px;
   font-size: 12px;
 }
-.icons {
-  width: 20%;
-}
-.icons ul {
-  display: flex;
-  
-  align-items: center;
-  justify-content: center;
-}
+
 .icons ul li {
   padding-right: 25px;
 }
 .profile {
   height: 20px;
   width: 20px;
-  align-items: center;
-  justify-content: center;
   padding: 1px;
   border: 2px solid var(--black);
   border-radius: 50%;
@@ -106,64 +147,38 @@ header .container {
   z-index: -1;
   border-radius: 50%;
 }
-.description {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .description .container {
-  display: flex;
   width: 60%;
   height: 225px;
   padding: 25px;
-  justify-content: flex-start;
-  font-weight: normal;
 }
 .description .pfp {
   width: 30%;
 }
 .description .text {
-  display: flex;
   flex-direction: column;
   padding-top: 15px;
   padding-left: 10px;
   width: 60%;
-  font-weight: 300;
 }
 .description .toptext {
   width: 60%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-bottom: 20px;
-}
-.description .toptext .username h1{
-  font-weight: 300;
-}
-.description .toptext button {
-  background-color: var(--lightgrey);
-  border: 1px solid var(--grey);
-  border-radius: 4px;
-  padding: 7px;
-  font-size: 14px;
-  font-weight: 500;
-}
-.description .stats {
-  display: flex;
-  width: 80%;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.bio .name {
-  font-weight: 500;
 }
 
+.description .toptext button {
+  font-size: 14px;
+}
+.description .stats {
+  width: 80%;
+  margin-bottom: 20px;
+}
 
 /*destaques*/
 .highlights ul {
   text-decoration: none;
   list-style-type: none;
-  display: flex;
   justify-content: space-around;
   text-align: center;
   margin: 0 40px 0px 40px;
@@ -175,44 +190,36 @@ header .container {
   height: 77px;
   width: 77px;
   border-radius: 50%;
-  padding:3px;
+  padding: 3px;
 }
 
 .highlights ul li h4 {
   padding-top: 10px;
   font-size: 14px;
-  font-weight: 500;
 }
 .feedmenu {
-  display: flex;
-  justify-content: center;
   margin: 60px 20px 20px 20px;
   font-size: 12px;
   letter-spacing: 1px;
-  font-weight: 500;
   border-top: 1px solid var(--grey);
 }
 .feedmenu a {
   padding: 20px 25px 0px 25px;
-  color: var(--darkergrey);
-  
 }
 .feedmenu .active {
   color: var(--black);
-  border-top: 1px solid var(--black); 
+  border-top: 1px solid var(--black);
   border-width: 60%;
 }
 .posts ul {
-  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0px 20px 0 20px;
 }
 .posts ul li {
   margin-bottom: 20px;
   position: relative;
 }
-.feed .posts li img{
+.feed .posts li img {
   height: 290px;
   width: 290px;
 }
