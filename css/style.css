@@ -48,19 +48,19 @@ header .container,
 .description .text,
 .highlights ul,
 .posts ul,
-.feedmenu {
+.feedmenu, footer .container .first, footer .container .second {
   display: flex;
 }
 header .container,
 .description .toptext,
 .description .stats,
-.posts ul {
+.posts ul, footer .container .first {
   justify-content: space-between;
 }
 .icons ul,
 .profile,
 .description,
-.feedmenu {
+.feedmenu, footer .container .second {
   justify-content: center;
 }
 header .container,
@@ -234,4 +234,12 @@ header .container {
 .posts li:hover .poststats {
   visibility: visible;
   opacity: 1;
+}
+footer .container{
+  margin: 0 160px;
+  padding: 30px 0;
+
+}
+footer .container .second{
+  padding-top: 20px;
 }
